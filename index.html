@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }
+  .jumbotron {
+      min-height:100vh;
+      background-image:url('https://static1.squarespace.com/static/51f9568fe4b07d5d9e4045d7/55f6e392e4b0af5177376297/55f6e5c7e4b0dda9d4e60145/1442244040600/IMG_5413-PS.jpg?format=1000w');
+      background-position:center;
+      background-size:cover;
+      flex-direction:row;
+      text-align:center;
+      color: #fff;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+      text-align:center;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #f4511e;
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+
+/* menu */
+  .bmenu{
+  	padding: 50px 0px;
+  	margin: 0 auto;
+  	position: relative;
+  	background: rgba(0,0,0,0.7);
+  	width: 500px;
+  	height: 500px;
+  	-webkit-border-radius: 250px;
+  	-moz-border-radius: 250px;
+  	border-radius: 250px;
+  	-webkit-transition: background-color 0.5s ease-in-out;
+  	-moz-transition: background-color 0.5s ease-in-out;
+  	-o-transition: background-color 0.5s ease-in-out;
+  	-ms-transition: background-color 0.5s ease-in-out;
+  	transition: background-color 0.5s ease-in-out;
+  }
+  .bmenu:hover{
+	background: rgba(0,0,0,0.2);
+  }
+  .bmenu li{
+  	font-size: 40px;
+  	display: block;
+  	line-height: 66px;
+  }
+  .bmenu li a{
+  	white-space: nowrap;
+  	color: transparent;
+  	display: block;
+  	text-align: center;
+  	text-transform: uppercase;
+  	text-shadow: 0px 0px 3px #fff;
+  	letter-spacing: 1px;
+  	-moz-transform: scale(0.8);
+  	-ms-transform: scale(0.8);
+  	-o-transform: scale(0.8);
+  	-webkit-transform: scale(0.8);
+  	transform: scale(0.8);
+  	-webkit-transition: all 0.4s linear;
+  	-moz-transition: all 0.4s linear;
+  	-o-transition: all 0.4s linear;
+  	-ms-transition: all 0.4s linear;
+  	transition: all 0.4s linear;
+  }
+  .bmenu:hover li a{
+  	text-shadow: 0px 0px 10px #fff;
+  }
+  .bmenu li a:hover{
+  	text-shadow: none;
+  	color: #fff;
+  	background:  rgba(0,0,0,0.2);
+  	-moz-transform: scale(1);
+  	-ms-transform: scale(1);
+  	-o-transform: scale(1);
+  	-webkit-transform: scale(1);
+  	transform: scale(1);
+  }
+  /*slides*/
+  .cr-container{
+	width: 1500px;
+	height: 800px;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+	border: 20px solid #fff;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+.cr-container label{
+	font-style: italic;
+  width: 300px;
+  height: 350px;
+	cursor: pointer;
+	line-height: 32px;
+	font-size: 24px;
+	position: relative;
+	margin-top:700px;
+	z-index: 1000;
+}
+.cr-container label:before{
+	content:'';
+	width: 34px;
+	height: 34px;
+	background: rgba(130,195,217,0.9);
+	position: absolute;
+	left: 50%;
+	margin-left: -17px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 0px 4px rgba(255,255,255,0.3);
+	z-index:-1;
+}
+.cr-container label:after{
+
+	content: '';
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+	position: absolute;
+	bottom: -20px;
+	right: 0px;
+}
+.cr-container label.cr-label-img-4:after{
+	width: 0px;
+}
+.cr-container input.cr-selector-img-1:checked ~ label.cr-label-img-1,
+.cr-container input.cr-selector-img-2:checked ~ label.cr-label-img-2,
+.cr-container input.cr-selector-img-3:checked ~ label.cr-label-img-3,
+.cr-container input.cr-selector-img-4:checked ~ label.cr-label-img-4{
+	color: #68abc2;
+}
+.cr-container input.cr-selector-img-1:checked ~ label.cr-label-img-1:before,
+.cr-container input.cr-selector-img-2:checked ~ label.cr-label-img-2:before,
+.cr-container input.cr-selector-img-3:checked ~ label.cr-label-img-3:before,
+.cr-container input.cr-selector-img-4:checked ~ label.cr-label-img-4:before{
+	background: #fff;
+	box-shadow: 0px 0px 0px 4px rgba(104,171,194,0.6);
+}
+.cr-container input{
+	display: none;
+}
+.cr-bgimg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
+}
+.cr-bgimg{
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.cr-bgimg div{
+	width: 1500px;
+	height: 100%;
+	position: relative;
+	float: left;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+.cr-bgimg div span{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	transform: scale(1.5);
+	opacity: 0;
+	z-index: 2;
+	text-indent: -9000px;
+}
+.cr-container input.cr-selector-img-1:checked ~ .cr-bgimg,
+.cr-bgimg div span:nth-child(1){
+	background-image: url('https://static1.squarespace.com/static/565e26f4e4b0a6f556ab9f00/t/583cd9ccc534a59807be82b6/1480382996317/?format=1500w');
+}
+.cr-container input.cr-selector-img-2:checked ~ .cr-bgimg,
+.cr-bgimg div span:nth-child(2){
+	background-image: url('https://static1.squarespace.com/static/565e26f4e4b0a6f556ab9f00/t/583cd2dc440243877a06d045/1480381176184/IMG_4775.jpg?format=1500w');
+}
+.cr-container input.cr-selector-img-3:checked ~ .cr-bgimg,
+.cr-bgimg div span:nth-child(3){
+	background-image: url('https://static1.squarespace.com/static/565e26f4e4b0a6f556ab9f00/t/583cd2dc440243877a06d045/1480381176184/IMG_4775.jpg?format=1500w');
+}
+.cr-container input.cr-selector-img-4:checked ~ .cr-bgimg,
+.cr-bgimg div span:nth-child(4){
+	background-image: url('https://static1.squarespace.com/static/565e26f4e4b0a6f556ab9f00/t/583cd2dc440243877a06d045/1480381176184/IMG_4775.jpg?format=1500w');
+}
+.cr-bgimg div:nth-child(1) span{
+	background-position: 0px 0px;
+}
+.cr-bgimg div:nth-child(2) span{
+	background-position: -150px 0px;
+}
+.cr-bgimg div:nth-child(3) span{
+	background-position: -300px 0px;
+}
+.cr-bgimg div:nth-child(4) span{
+	background-position: -450px 0px;
+}
+.cr-container input:checked ~ .cr-bgimg div span{
+	-webkit-animation: scaleOut 0.6s ease-in-out;
+	-moz-animation: scaleOut 0.6s ease-in-out;
+	-o-animation: scaleOut 0.6s ease-in-out;
+	-ms-animation: scaleOut 0.6s ease-in-out;
+	animation: scaleOut 0.6s ease-in-out;
+}
+@-webkit-keyframes scaleOut{
+	0%{ -webkit-transform: scale(1); opacity: 1; }
+	100%{ -webkit-transform: scale(1.5); opacity: 0; }
+}
+@-moz-keyframes scaleOut{
+	0%{ -moz-transform: scale(1); opacity: 1; }
+	100%{ -moz-transform: scale(1.5); opacity: 0; }
+}
+@-o-keyframes scaleOut{
+	0%{ -o-transform: scale(1); opacity: 1; }
+	100%{ -o-transform: scale(1.5); opacity: 0; }
+}
+@-ms-keyframes scaleOut{
+	0%{ -ms-transform: scale(1); opacity: 1; }
+	100%{ -ms-transform: scale(1.5); opacity: 0; }
+}
+@keyframes scaleOut{
+	0%{ transform: scale(1); opacity: 1; }
+	100%{ transform: scale(1.5); opacity: 0; }
+}
+.cr-container input.cr-selector-img-1:checked ~ .cr-bgimg div span:nth-child(1),
+.cr-container input.cr-selector-img-2:checked ~ .cr-bgimg div span:nth-child(2),
+.cr-container input.cr-selector-img-3:checked ~ .cr-bgimg div span:nth-child(3),
+.cr-container input.cr-selector-img-4:checked ~ .cr-bgimg div span:nth-child(4)
+{
+	-webkit-transition: -webkit-transform 0.5s ease-in-out, opacity 0.5s ease-in-out, z-index 0s linear 0.6s;
+	-moz-transition: -moz-transform 0.5s ease-in-out, opacity 0.5s ease-in-out, z-index 0s linear 0.6s;
+	-o-transition: -o-transform 0.5s ease-in-out, opacity 0.5s ease-in-out, z-index 0s linear 0.6s;
+	-ms-transition: -ms-transform 0.5s ease-in-out, opacity 0.5s ease-in-out, z-index 0s linear 0.6s;
+	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, z-index 0s linear 0.6s;
+	-webkit-animation: none;
+	-moz-animation: none;
+	-o-animation: none;
+	-ms-animation: none;
+	animation: none;
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	z-index:10000;
+}
+.cr-titles h3{
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+.cr-titles h3 span{
+	z-index: 10000;
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	text-align: center;
+	opacity: 0;
+	top: 50%;
+}
+.cr-titles h3 span:nth-child(1){
+	left: 0px;
+	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+	font-size: 70px;
+	letter-spacing: 7px;
+	color: transparent;
+	text-shadow: 0px 0px 10px #fff;
+	-webkit-transition: text-shadow 0.8s ease-in-out, opacity 0.8s ease-in-out;
+	-moz-transition: text-shadow 0.8s ease-in-out, opacity 0.8s ease-in-out;
+	-o-transition: text-shadow 0.8s ease-in-out, opacity 0.8s ease-in-out;
+	-ms-transition: text-shadow 0.8s ease-in-out, opacity 0.8s ease-in-out;
+	transition: text-shadow 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+.cr-titles h3 span:nth-child(2){
+	margin-top: 84px;
+	letter-spacing: 0px;
+	background: rgba(104,171,194,0.9);
+	font-size: 14px;
+	padding: 10px 0px;
+	font-style: italic;
+	font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	-webkit-transition: opacity 0.8s ease-in-out;
+	-moz-transition: opacity 0.8s ease-in-out;
+	-o-transition: opacity 0.8s ease-in-out;
+	-ms-transition: opacity 0.8s ease-in-out;
+	transition: opacity 0.8s ease-in-out;
+}
+.cr-container input:checked ~ .cr-titles h3 span{
+	opacity: 0;
+	text-shadow: 0px 0px 30px #fff;
+}
+.cr-container input.cr-selector-img-1:checked ~ .cr-titles h3:nth-child(1) span:nth-child(1),
+.cr-container input.cr-selector-img-2:checked ~ .cr-titles h3:nth-child(2) span:nth-child(1),
+.cr-container input.cr-selector-img-3:checked ~ .cr-titles h3:nth-child(3) span:nth-child(1),
+.cr-container input.cr-selector-img-4:checked ~ .cr-titles h3:nth-child(4) span:nth-child(1){
+	opacity: 1;
+	text-shadow: 0px 0px 1px #fff;
+}
+.cr-container input.cr-selector-img-1:checked ~ .cr-titles h3:nth-child(1) span:nth-child(2),
+.cr-container input.cr-selector-img-2:checked ~ .cr-titles h3:nth-child(2) span:nth-child(2),
+.cr-container input.cr-selector-img-3:checked ~ .cr-titles h3:nth-child(3) span:nth-child(2),
+.cr-container input.cr-selector-img-4:checked ~ .cr-titles h3:nth-child(4) span:nth-child(2){
+	opacity: 1;
+}
+/* Media Query: Let's show the inputs on mobile sized browsers because they probably don't support the label trick: */
+@media screen and (max-width: 768px) {
+	.cr-container input{
+		display: inline;
+		width: 24%;
+		margin-top: 350px;
+		z-index: 1000;
+		position: relative;
+	}
+	.cr-container label{
+		display: none;
+	}
+}
+
+/*photo slides*/
+
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+
+
+<div class="jumbotron text-center">
+  <h1>Diamond Rally</h1>
+  <p>SATURDAY, MAY 6, 2017</p>
+  <ul class="bmenu">
+  	<li><a href="#">Video</a></li>
+  	<li><a href="#">About</a></li>
+  	<li><a href="#">Destination</a></li>
+  	<li><a href="#">Schedule</a></li>
+  	<li><a href="#">Tickets</a></li>
+  	<li><a href="#">Contact</a></li>
+  </ul>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>Rally 2016 Video</h2><br>
+    </div>
+    <div class="col-sm-8">
+
+      <!-- 16:9 aspect ratio -->
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/173960134"></iframe>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>VANCOUVER TO WHISTLER AND BEYOND...<br/>
+        SEA TO SKY HIGHWAY 99<br/>
+        SATURDAY, MAY 6, 2017</h2>
+	<!-- radio buttons and labels -->
+        <section class="cr-container">
+
+          <input id="select-img-1" name="radio-set-1" type="radio" class="cr-selector-img-1" checked/>
+          <label for="select-img-1" class="cr-label-img-1">1</label>
+
+          <input id="select-img-2" name="radio-set-1" type="radio" class="cr-selector-img-2" />
+          <label for="select-img-2" class="cr-label-img-2">2</label>
+
+          <input id="select-img-3" name="radio-set-1" type="radio" class="cr-selector-img-3" />
+          <label for="select-img-3" class="cr-label-img-3">3</label>
+
+          <input id="select-img-4" name="radio-set-1" type="radio" class="cr-selector-img-4" />
+          <label for="select-img-4" class="cr-label-img-4">4</label>
+
+          <div class="clr"></div>
+          <div class="cr-bgimg">
+            <div>
+              <span>Slice 1 - Image 1</span>
+              <span>Slice 1 - Image 2</span>
+              <span>Slice 1 - Image 3</span>
+              <span>Slice 1 - Image 4</span>
+            </div>
+            <div>
+              <span>Slice 2 - Image 1</span>
+              <span>Slice 2 - Image 2</span>
+              <span>Slice 2 - Image 3</span>
+              <span>Slice 2 - Image 4</span>
+            </div>
+            <div>
+              <span>Slice 3 - Image 1</span>
+              <span>Slice 3 - Image 2</span>
+              <span>Slice 3 - Image 3</span>
+              <span>Slice 3 - Image 4</span>
+            </div>
+            <div>
+              <span>Slice 4 - Image 1</span>
+              <span>Slice 4 - Image 2</span>
+              <span>Slice 4 - Image 3</span>
+              <span>Slice 4 - Image 4</span>
+            </div>
+          </div>
+          <div class="cr-titles">
+            <h3><span>Serendipity</span><span>What you've been dreaming of</span></h3>
+            <h3><span>Adventure</span><span>Where the fun begins</span></h3>
+            <h3><span>Nature</span><span>Unforgettable eperiences</span></h3>
+            <h3><span>Serenity</span><span>When silence touches nature</span></h3>
+          </div>
+        </section>
+
+
+    </div>
+  </div>
+</div>
+<!--About--->
+
+<div id="services" class="container-fluid text-center">
+  <h2>HUBLOT DIAMOND RALLY IS A
+FUNDRAISING RALLY FOR CHARITIES</h2>
+  <h4>THE ULTIMATE SUPERCAR CHARITY CHALLENGE</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>HUBLOT DIAMOND RALLY GOALS</h4>
+      <p>Host an exciting driving rally on Canada’s most scenic road; Sea to Sky Highway 99<br/>
+
+Raise funds and awareness for your charity cause<br/>
+
+Connect with like-minded luxury and supercar owners</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>2017 HUBLOT DIAMOND RALLY AWARDS CATEGORIES</h4>
+      <p>Best Livery / Decal – Corporate<br/>
+
+Best Livery / Decal – Private<br/>
+
+Best Dressed Team<br/>
+
+Most Successful Team Charity Campaign<br/>
+
+Hublot Diamond Rally Ambassador Award</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>JOB DONE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center bg-grey">
+  <h2>EVENT SCHEDULE</h2>
+  <h4>FRIDAY, MAY 5, 2017</h4>
+  <h4>AT CONCORD PACIFIC</h4>
+  <h4>FROM 5PM TO 8PM</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-12">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>2017 HUBLOT DIAMOND RALLY AWARDS CATEGORIES</h4>
+      <p>Private reception for all registered drivers, navigators, accredited media and supercar buyers.<br/>
+ADESA Richmond supercar auction with 20 vehicles (including 10 with no reserve) for sale.<br/>
+Concord Pacific Presentation Centre located at 88 Pacific Blvd.<br/>
+Pick up your decals and meet with your fellow Hublot Diamond Rally 2017 drivers.<br/>
+After 8pm, dinner at La Pentola at your own leisure.<br/>
+Late night imbibing at Bar None</p>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div id="services" class="container-fluid text-center bg-grey">
+  <h2>SATURDAY, MAY 6, 2017</h2>
+  <h4>VANCOUVER TO WHISTLER AND BEYOND</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>8:00AM TO 9:30AM
+OFFICIAL START LOCATION
+BRIAN JESSEL BMW
+(2311 BOUNDARY ROAD)
+*OUTSIDE PUBLIC ACCESS* </h4>
+      <p>Mandatory driver and navigator check-in:
+Submit waiver form
+Receive your decals
+Pick up lunch boxes
+Pick up wristbands and hats
+Continental breakfast for all registered drivers and navigators provided by Brian Jessel BMW.</p>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>9:30AM TO 9:45AM</h4>
+      <p>Welcome Ceremony
+Sponsor welcomes
+Safety driver meeting</p>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>10:00AM - SHARP - DEAPRTURE!</h4>
+      <p>Official rally start and departure via Second Narrows bridge onto Sea to Sky highway 99.
+ </p>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>11:00AM - 1ST PIT STOP
+CHANCES CASINO
+(9000 VALLEY DRIVE) SQUAMISH
+*PUBLIC ACCESS</h4>
+      <p>1-hour stop
+Gaming floor is open for you during this pit stop.
+Photo and Video opportunity,
+BBQ will be available for purchase.
+Depart at Noon - Sharp!
+ </p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <h4>1:00PM - 2ND PIT STOP
+PEMBERTON AIRPORT
+(1850 AIRPORT ROAD)
+*NO PUBLIC ACCESS*</h4>
+      <p>3-hour stop
+Supercar runway drives for all drivers who would like to participate.
+Photo and Video opportunity.
+ </p>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>4:00PM DEPART TO
+FOUR SEASONS RESORT
+WHISTLER HOTEL</h4>
+      <p>Depart from Pemberton Airport </p>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4 style="color:#303030;">4:30PM TO 6:00PM
+3RD PIT STOP
+AWARDS PRESENTATION
+FOUR SEASONS RESORT HOTEL</h4>
+      <p>Hublot Diamond Rally awards and cocktail reception in the private courtyard at the Four Seasons Resort Hotel for all drivers and navigators.
+25 "Diamond Parking" passes will be allocated based on the automotive pedigree of your car.
+Allocated supercars will be parked outside the Four Seasons Resort Hotel.</p>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4 style="color:#303030;">11:00PM</h4>
+      <p>Gather after dinner at Buffalo Bills for nightcaps and dancing with DJ music.
+Your Hublot Diamond Rally wristband will allow access into the club before 11pm for free.
+Enter through the VIP entrance. </p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Choose a payment plan that works for you</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Basic</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>20</strong> Lorem</p>
+          <p><strong>15</strong> Ipsum</p>
+          <p><strong>5</strong> Dolor</p>
+          <p><strong>2</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$19</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Pro</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>50</strong> Lorem</p>
+          <p><strong>25</strong> Ipsum</p>
+          <p><strong>10</strong> Dolor</p>
+          <p><strong>5</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$29</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Premium</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>100</strong> Lorem</p>
+          <p><strong>50</strong> Ipsum</p>
+          <p><strong>25</strong> Dolor</p>
+          <p><strong>10</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$49</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
